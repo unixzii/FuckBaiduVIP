@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe" customClass="SearchResultCellView">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQT-Zn-Hcx">
+                    <rect key="frame" x="7" y="7" width="66" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="A3Z-GS-1R7"/>
+                        <constraint firstAttribute="width" constant="60" id="gA6-oM-wYb"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" imageFrameStyle="grayBezel" id="hqz-NK-V40"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptR-cp-yqL">
+                    <rect key="frame" x="76" y="41" width="333" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="iMv-aH-zq8"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="CNm-mz-nLc">
+                        <font key="font" metaFont="systemBold" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0W6-IH-Ihg">
+                    <rect key="frame" x="76" y="20" width="333" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="CTk-Vh-vwZ"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="9Ai-bB-haw">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CmF-9P-OeP">
+                    <rect key="frame" x="448" y="31" width="41" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="Q4w-UY-nWn"/>
+                        <constraint firstAttribute="height" constant="16" id="TUr-cB-6ZL"/>
+                    </constraints>
+                    <buttonCell key="cell" type="inline" title="下载" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="g2r-A3-miy">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="11" name=".PingFangSC-Medium"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="ptR-cp-yqL" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="2N7-rn-Fsc"/>
+                <constraint firstItem="ptR-cp-yqL" firstAttribute="leading" secondItem="aQT-Zn-Hcx" secondAttribute="trailing" constant="8" id="6eW-J7-UCv"/>
+                <constraint firstAttribute="trailing" secondItem="CmF-9P-OeP" secondAttribute="trailing" constant="20" id="EAG-5g-Fek"/>
+                <constraint firstAttribute="bottom" secondItem="0W6-IH-Ihg" secondAttribute="bottom" constant="20" id="EBI-H5-OoN"/>
+                <constraint firstItem="CmF-9P-OeP" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="32" id="QfD-Cr-wLh"/>
+                <constraint firstItem="aQT-Zn-Hcx" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="eXK-7j-oBU"/>
+                <constraint firstItem="0W6-IH-Ihg" firstAttribute="leading" secondItem="aQT-Zn-Hcx" secondAttribute="trailing" constant="8" id="sZw-xL-X9C"/>
+                <constraint firstItem="aQT-Zn-Hcx" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="10" id="zse-MF-tvy"/>
+            </constraints>
+            <connections>
+                <outlet property="artwork" destination="aQT-Zn-Hcx" id="95s-2t-qUz"/>
+                <outlet property="downloadButton" destination="CmF-9P-OeP" id="hri-Vu-8qr"/>
+                <outlet property="metaInfo" destination="0W6-IH-Ihg" id="noi-ib-b1X"/>
+                <outlet property="title" destination="ptR-cp-yqL" id="6au-vV-0ny"/>
+            </connections>
+            <point key="canvasLocation" x="334.5" y="180"/>
+        </customView>
+    </objects>
+</document>
