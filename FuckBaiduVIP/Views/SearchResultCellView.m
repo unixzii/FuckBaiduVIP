@@ -13,12 +13,17 @@
     id _target;
     SEL _action;
     NSInteger _row;
+    
+    id _target2;
+    SEL _action2;
+    NSInteger _row2;
 }
 
 @property (weak) IBOutlet NSImageView *artwork;
 @property (weak) IBOutlet NSTextField *title;
 @property (weak) IBOutlet NSTextField *metaInfo;
 @property (weak) IBOutlet NSButton *downloadButton;
+@property (weak) IBOutlet NSButton *trialButton;
 
 @end
 
@@ -29,6 +34,9 @@
     
     self.downloadButton.target = self;
     self.downloadButton.action = @selector(downloadButtonDidClick);
+    
+    self.trialButton.target = self;
+    self.trialButton.action = @selector(trialButtonDidClick);
 }
 
 - (void)setBackgroundStyle:(NSBackgroundStyle)backgroundStyle {
@@ -50,6 +58,12 @@
     }
 }
 
+- (void)trialButtonDidClick {
+    if (_target && _action) {
+        [_target2 performSelector:_action2 withObject:[NSNumber numberWithInteger:_row2]];
+    }
+}
+
 - (void)setSong:(Song *)song {
     self.title.stringValue = song.title;
     self.metaInfo.stringValue = [NSString stringWithFormat:@"%@ - %@", song.album, song.artist];
@@ -61,6 +75,12 @@
     _target = target;
     _action = action;
     _row = row;
+}
+
+- (void)setTarget:(id)target action:(SEL)action forTryingSongAtRow:(NSInteger)row {
+    _target2 = target;
+    _action2 = action;
+    _row2 = row;
 }
 
 @end

@@ -18,6 +18,7 @@
 		9D85AE3B1C6F15350032E2EE /* SearchResultCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D85AE3A1C6F15350032E2EE /* SearchResultCellView.xib */; };
 		9D85AE3E1C6F19200032E2EE /* SearchResultCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D85AE3D1C6F19200032E2EE /* SearchResultCellView.m */; };
 		9D85AE421C6F27B00032E2EE /* NSString+URLEscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D85AE411C6F27B00032E2EE /* NSString+URLEscape.m */; };
+		9DE6E69A1C705F5700F6E579 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE6E6991C705F5700F6E579 /* AVFoundation.framework */; };
 		9DF06BD31C6F2D4B000EAD9B /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF06BD21C6F2D4B000EAD9B /* SearchResult.m */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		9D85AE3D1C6F19200032E2EE /* SearchResultCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultCellView.m; sourceTree = "<group>"; };
 		9D85AE401C6F27B00032E2EE /* NSString+URLEscape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEscape.h"; sourceTree = "<group>"; };
 		9D85AE411C6F27B00032E2EE /* NSString+URLEscape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEscape.m"; sourceTree = "<group>"; };
+		9DE6E6991C705F5700F6E579 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9DF06BD11C6F2D4B000EAD9B /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
 		9DF06BD21C6F2D4B000EAD9B /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DE6E69A1C705F5700F6E579 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +63,7 @@
 		9D85AE051C6EDCA50032E2EE = {
 			isa = PBXGroup;
 			children = (
+				9DE6E6991C705F5700F6E579 /* AVFoundation.framework */,
 				9D85AE101C6EDCA50032E2EE /* FuckBaiduVIP */,
 				9D85AE0F1C6EDCA50032E2EE /* Products */,
 			);

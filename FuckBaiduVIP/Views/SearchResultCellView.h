@@ -12,6 +12,8 @@
 @interface SearchResultCellView : NSTableCellView
 
 - (void)setSong:(Song *)song;
+
 - (void)setTarget:(id)target action:(SEL)action forDownloadingSongAtRow:(NSInteger)row;
+- (void)setTarget:(id)target action:(SEL)action forTryingSongAtRow:(NSInteger)row;
 
 @end

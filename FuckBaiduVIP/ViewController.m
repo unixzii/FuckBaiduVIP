@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Cyandev. All rights reserved.
 //
 
+#import <AVFoundation/AVFoundation.h>
+
 #import "ViewController.h"
 #import "SearchResultCellView.h"
 #import "Song.h"
@@ -24,6 +26,8 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property (weak) IBOutlet NSProgressIndicator *progressBar;
 @property (weak) IBOutlet NSButtonCell *dirButton;
+
+@property (strong, nonatomic) AVPlayer *player;
 
 @property (strong, nonatomic) NSMutableArray *songs;
 @property (strong, nonatomic) SearchResult *searchResult;
@@ -85,6 +89,7 @@
 
     [cell setSong:[self.songs objectAtIndex:row]];
     [cell setTarget:self action:@selector(downloadSongAtRow:) forDownloadingSongAtRow:row];
+    [cell setTarget:self action:@selector(playSongAtRow:) forTryingSongAtRow:row];
     
     return cell;
 }
@@ -210,6 +215,27 @@
             [[NSWorkspace sharedWorkspace] openFile:path];
         }
     });
+}
+
+#pragma mark - Player
+
+- (void)playSongAtRow:(NSNumber *)row {
+    NSString *mp3URL = ((Song *) [self.songs objectAtIndex:[row integerValue]]).mp3URL;
+    NSURL *URL = [NSURL URLWithString:mp3URL];
+    
+    [self playWithURL:URL];
+}
+
+- (void)playWithURL:(NSURL *)URL {
+    if (self.player) {
+        [self.player pause];
+        [self.player.currentItem cancelPendingSeeks];
+        [self.player.currentItem.asset cancelLoading];
+        self.player = nil;
+    }
+    
+    self.player = [AVPlayer playerWithURL:URL];
+    [self.player play];
 }
 
 @end

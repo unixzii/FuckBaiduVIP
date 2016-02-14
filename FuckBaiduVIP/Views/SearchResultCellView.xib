@@ -53,13 +53,26 @@
                         <font key="font" size="11" name=".PingFangSC-Medium"/>
                     </buttonCell>
                 </button>
+                <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jQh-Rb-fXb">
+                    <rect key="frame" x="403" y="31" width="37" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="37" id="9ZG-yr-CMQ"/>
+                        <constraint firstAttribute="height" constant="19" id="WXF-tp-eWb"/>
+                    </constraints>
+                    <buttonCell key="cell" type="inline" bezelStyle="inline" image="NSSlideshowTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="gH8-f8-p1b">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="smallSystemBold"/>
+                    </buttonCell>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="ptR-cp-yqL" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="2N7-rn-Fsc"/>
                 <constraint firstItem="ptR-cp-yqL" firstAttribute="leading" secondItem="aQT-Zn-Hcx" secondAttribute="trailing" constant="8" id="6eW-J7-UCv"/>
+                <constraint firstItem="jQh-Rb-fXb" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="31" id="Ci4-aR-tZD"/>
                 <constraint firstAttribute="trailing" secondItem="CmF-9P-OeP" secondAttribute="trailing" constant="20" id="EAG-5g-Fek"/>
                 <constraint firstAttribute="bottom" secondItem="0W6-IH-Ihg" secondAttribute="bottom" constant="20" id="EBI-H5-OoN"/>
                 <constraint firstItem="CmF-9P-OeP" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="32" id="QfD-Cr-wLh"/>
+                <constraint firstItem="CmF-9P-OeP" firstAttribute="leading" secondItem="jQh-Rb-fXb" secondAttribute="trailing" constant="8" id="Xxr-JU-Lrq"/>
                 <constraint firstItem="aQT-Zn-Hcx" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="eXK-7j-oBU"/>
                 <constraint firstItem="0W6-IH-Ihg" firstAttribute="leading" secondItem="aQT-Zn-Hcx" secondAttribute="trailing" constant="8" id="sZw-xL-X9C"/>
                 <constraint firstItem="aQT-Zn-Hcx" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="10" id="zse-MF-tvy"/>
@@ -69,8 +82,12 @@
                 <outlet property="downloadButton" destination="CmF-9P-OeP" id="hri-Vu-8qr"/>
                 <outlet property="metaInfo" destination="0W6-IH-Ihg" id="noi-ib-b1X"/>
                 <outlet property="title" destination="ptR-cp-yqL" id="6au-vV-0ny"/>
+                <outlet property="trialButton" destination="jQh-Rb-fXb" id="yIK-mo-gu1"/>
             </connections>
             <point key="canvasLocation" x="334.5" y="180"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSSlideshowTemplate" width="17" height="14"/>
+    </resources>
 </document>
